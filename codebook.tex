@@ -56,7 +56,7 @@
 }
 
 \pagestyle{fancy}
-\fancyhead[L]{RuntimeTerror - IIIT-Delhi}
+\fancyhead[L]{NepaliTourist - IIIT-Delhi}
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{}
 
@@ -70,43 +70,39 @@
 % New codebook
 \section{Flow and matching}
 
-\subsection{Max flow (Dinic)} % Stanford
-\lstinputlisting[language=c++]{dinic.cpp}
+\subsection{Max flow (PushRelabel)} % Stanford
+\lstinputlisting[language=c++]{Maxflow.cpp}
 
 \subsection{Min-cost max-flow}
-\lstinputlisting[language=c++]{MinCostMaxFlow.cpp}
+\lstinputlisting[language=c++]{MinCost.cpp}
 
 \subsection{Max Bipartite Matching (Hopcroft-Karp)} % Stanford
-\lstinputlisting[language=c++]{bipartite.cpp}
-
-\subsection{General Matching} % Stanford
-\lstinputlisting[language=c++]{GeneralMatching.cpp}
-
+\lstinputlisting[language=c++]{maxMatching.cpp}
 
 \section{Geometry}
 
 \subsection{Miscellaneous Geometry} % Stanford
-\lstinputlisting[language=c++]{geom-2d.cpp}
+\lstinputlisting[language=c++]{Geometry.cpp}
 
 
-\subsection{Convex hull} % Brian Bi
-\lstinputlisting[language=c++]{monotone.cpp}
+% \subsection{Convex hull} % Brian Bi
+% \lstinputlisting[language=c++]{monotone.cpp}
 
-\subsection{Pick's Theorem (Text)} % Wesley May
-For a polygon with all vertices on lattice points, $A = i + b/2 - 1$, where $A$
-is the area, $i$ is the number of lattice points strictly within the polygon,
-and $b$ is the number of lattice points on the boundary of the polygon.
+% \subsection{Pick's Theorem (Text)} % Wesley May
+% For a polygon with all vertices on lattice points, $A = i + b/2 - 1$, where $A$
+% is the area, $i$ is the number of lattice points strictly within the polygon,
+% and $b$ is the number of lattice points on the boundary of the polygon.
 
-\section{Math Algorithms}
+% \section{Math Algorithms}
 
-\subsection{Sieve} % Jimmy Mårdell (Yarin)
-\lstinputlisting[language=c++]{yarin.cpp}
+% \subsection{Sieve} % Jimmy Mårdell (Yarin)
+% \lstinputlisting[language=c++]{yarin.cpp}
 
-\subsection{Modular arithmetic and linear Diophantine solver} % Stanford
-\lstinputlisting[language=c++]{modular.cpp}
+% \subsection{Modular arithmetic and linear Diophantine solver} % Stanford
+% \lstinputlisting[language=c++]{modular.cpp}
 
-\subsection{Gaussian elimination} % Stanford
-\lstinputlisting[language=c++]{RREF.cpp}
+% \subsection{Gaussian elimination} % Stanford
+% \lstinputlisting[language=c++]{RREF.cpp}
 
 % \subsection{Solving linear systems (Text)} % Brian Bi
 % To solve a general system of linear equations, put it into matrix form and
@@ -123,25 +119,25 @@ and $b$ is the number of lattice points on the boundary of the polygon.
 % set all other variables to 0. Ignore rows consisting entirely of 0. The
 % solution is unique iff the rank of the matrix equals the number of variables.
 
-\subsection{Fast Fourier transform (FFT)} % Stanford
-\lstinputlisting[language=c++]{fft.cpp}
+% \subsection{Fast Fourier transform (FFT)} % Stanford
+% \lstinputlisting[language=c++]{fft.cpp}
 
-\subsection{Pollard rho and (Rabin-Miller)} % Qiyu Zhu
-\lstinputlisting[language=c++]{pollard-rho.cpp}
+% \subsection{Pollard rho and (Rabin-Miller)} % Qiyu Zhu
+% \lstinputlisting[language=c++]{pollard-rho.cpp}
 
-\subsection{Euler's Totient} % Andre Hahn Pereira
-\lstinputlisting[language=c++]{totient.cpp}
+% \subsection{Euler's Totient} % Andre Hahn Pereira
+% \lstinputlisting[language=c++]{totient.cpp}
 
-\section{Graphs}
+% \section{Graphs}
 
-\subsection{Strongly connected components} % Stanford (modified by Brian Bi)
-\lstinputlisting[language=c++]{scc.cpp}
+% \subsection{Strongly connected components} % Stanford (modified by Brian Bi)
+% \lstinputlisting[language=c++]{scc.cpp}
 
-\subsection{Bridges} % Andre Hahn Pereira
-\lstinputlisting[language=c++]{bridges.cpp}
+% \subsection{Bridges} % Andre Hahn Pereira
+% \lstinputlisting[language=c++]{bridges.cpp}
 
-\subsection{Bellman Ford}
-\lstinputlisting[language=c++]{BellmanFord.cpp}
+% \subsection{Bellman Ford}
+% \lstinputlisting[language=c++]{BellmanFord.cpp}
 
 % \subsection{Dijkstra}
 % \lstinputlisting[language=c++]{dijkstra.cpp}
@@ -152,94 +148,97 @@ and $b$ is the number of lattice points on the boundary of the polygon.
 % \subsection{Kruskal(MST)}
 % \lstinputlisting[language=c++]{KruskalMST.cpp}
 
-\subsection{Centroid Decompostion}
-\lstinputlisting[language=c++]{centroid_decomposition.cpp}
+% \subsection{Centroid Decompostion}
+% \lstinputlisting[language=c++]{centroid_decomposition.cpp}
 
-\subsection{Lowest Common Ancestor} 
-\lstinputlisting[language=c++]{LCA.cpp}
+% \subsection{Lowest Common Ancestor} 
+% \lstinputlisting[language=c++]{LCA.cpp}
 
-\subsection{Heavy Light Decomposition(HLD)} 
-\lstinputlisting[language=c++]{HLD.cpp}
+% \subsection{Heavy Light Decomposition(HLD)} 
+% \lstinputlisting[language=c++]{HLD.cpp}
 
-\section{Strings}
+% \section{Strings}
 
 % \subsection{Suffix arrays} % Stanford
 % \lstinputlisting[language=c++]{suffix-array.cpp}
 
-\subsection{Palindromic Tree} % Stanford
-\lstinputlisting[language=c++]{palindromictree.cpp}
+% \subsection{Palindromic Tree} % Stanford
+% \lstinputlisting[language=c++]{palindromictree.cpp}
 
-\subsection{Trie} % Brian Bi
-\lstinputlisting[language=c++]{Trie.cpp}
+% \subsection{Trie} % Brian Bi
+% \lstinputlisting[language=c++]{Trie.cpp}
 
 % \subsection{Longest palindromic substring(Manacher)} % Brian Bi
 % \lstinputlisting[language=c++]{manacher.cpp}
 
-\subsection{Z \& Prefix Function, Knuth Morris Pratt (KMP)} % Brian Bi
-\lstinputlisting[language=c++]{Z&PF.cpp}
+% \subsection{Z \& Prefix Function, Knuth Morris Pratt (KMP)} % Brian Bi
+% \lstinputlisting[language=c++]{Z&PF.cpp}
 
-\section{Data Structures}
+% \section{Data Structures}
 
-\subsection{Implicit Treap} % Brian Bi
-\lstinputlisting[language=c++]{Treap.cpp}
+% \subsection{Implicit Treap} % Brian Bi
+% \lstinputlisting[language=c++]{Treap.cpp}
 
-\subsection{Binary Indexed Tree (BIT)} % Brian Bi
-\lstinputlisting[language=c++]{BIT.cpp}
+% \subsection{Binary Indexed Tree (BIT)} % Brian Bi
+% \lstinputlisting[language=c++]{BIT.cpp}
 
-\subsection{Binary Indexed Tree (2D BIT)} % Brian Bi
-\lstinputlisting[language=c++]{2dBIT.cpp}
+% \subsection{Binary Indexed Tree (2D BIT)} % Brian Bi
+% \lstinputlisting[language=c++]{2dBIT.cpp}
 
-\subsection{Segment Tree with Lazy Propagation} % Brian Bi
-\lstinputlisting[language=c++]{segtree.cpp}
+% \subsection{Segment Tree with Lazy Propagation} % Brian Bi
+% \lstinputlisting[language=c++]{segtree.cpp}
 
-\subsection{Sparse Table RMQ} % Brian Bi
-\lstinputlisting[language=c++]{sparsetablermq.cpp}
+% \subsection{Sparse Table RMQ} % Brian Bi
+% \lstinputlisting[language=c++]{sparsetablermq.cpp}
 
-\section{Miscellaneous}
+% \section{Miscellaneous}
 
 % \subsection{Stable Marriage} % Brian Bi
 % \lstinputlisting[language=c++]{stablemp.cpp}
 
-\subsection{Berlekamp Massey} % Brian Bi
-\lstinputlisting[language=c++]{BerlekampMassey.cpp}
+% \subsection{Berlekamp Massey} % Brian Bi
+% \lstinputlisting[language=c++]{BerlekampMassey.cpp}
 
-\subsection{Convex Hull Trick} % Brian Bi
-\lstinputlisting[language=c++]{CHT.cpp}
+% \subsection{Convex Hull Trick} % Brian Bi
+% \lstinputlisting[language=c++]{CHT.cpp}
 
-\subsection{2-SAT} % Brian Bi
-\lstinputlisting[language=c++]{2sat.cpp}
+% \subsection{2-SAT} % Brian Bi
+% \lstinputlisting[language=c++]{2sat.cpp}
 
-\subsection{LCS} % Brian Bi
-\lstinputlisting[language=c++]{LCS.cpp}
+% \subsection{LCS} % Brian Bi
+% \lstinputlisting[language=c++]{LCS.cpp}
 
-\subsection{LIS} % Brian Bi
-\lstinputlisting[language=c++]{lis.cpp}
+% \subsection{LIS} % Brian Bi
+% \lstinputlisting[language=c++]{lis.cpp}
 
-\subsection{Ternary Search} % Brian Bi
-\lstinputlisting[language=c++]{TernarySearch.cpp}
+% \subsection{Ternary Search} % Brian Bi
+% \lstinputlisting[language=c++]{TernarySearch.cpp}
 
-\subsection{C ++ Template} % Brian Bi
-\lstinputlisting[language=c++]{template.cpp}
+% \subsection{C ++ Template} % Brian Bi
+% \lstinputlisting[language=c++]{template.cpp}
 
-\subsection{C ++ Build System} % Brian Bi
-\lstinputlisting[language=c++]{C++build_system.cpp}
+% \subsection{C ++ Build System} % Brian Bi
+% \lstinputlisting[language=c++]{C++build_system.cpp}
 
 % \subsection{Java BigInt} % Brian Bi
 % \lstinputlisting[language=Java]{BigIntJava.java}
 
-\subsection{Java Template} % Brian Bi
-\lstinputlisting[language=Java]{javatemplate.java}
+% \subsection{Java Template} % Brian Bi
+% \lstinputlisting[language=Java]{javatemplate.java}
 
-\subsection{Python Fast I/O} % Brian Bi
-\lstinputlisting[language=Python]{FastIOPython.py}
+% \subsection{Python Fast I/O} % Brian Bi
+% \lstinputlisting[language=Python]{FastIOPython.py}
 
-\subsection{Mobius Function} % Brian Bi
-\lstinputlisting[language=c++]{MobiusFunction.cpp}
+% \subsection{Mobius Function} % Brian Bi
+% \lstinputlisting[language=c++]{MobiusFunction.cpp}
 
-\subsection{K-Bit Subsets} % Brian Bi
-\lstinputlisting[language=c++]{KBitSubsets.cpp}
+% \subsection{K-Bit Subsets} % Brian Bi
+% \lstinputlisting[language=c++]{KBitSubsets.cpp}
 
 % Bit Tricks {{{
+\subsection{Java} % Brian Bi
+\lstinputlisting[language=Java]{pushRelabel.java}
+
 
 \subsection{Bit tricks}
 Clearing the lowest 1 bit: \verb$x & (x - 1)$, all trailing 1's: \verb$x & (x + 1)$ \\
@@ -378,12 +377,12 @@ $k+1$ weak excedances ($\pi_i \ge i$). \\
 Formula: $E(n,k)=(k+1)E(n-1,k)+(n-k)E(n-1,k-1)$. \quad
 $x^n = \sum_{k=0}^{n-1} E(n,k) {x+k \choose n}$.
 
-% \subsection{Burnside's lemma}
-% The number of orbits under group $G$'s action on set $X$:\\
-% $|X/G| = \frac{1}{|G|} \sum_{g \in G} |X_g|$,
-% where $X_g=\{ x \in X: g(x)=x \}$. (``Average number of fixed points.'') \\
-% Let $w(x)$ be weight of $x$'s orbit. Sum of all orbits' weights:
-% $\sum_{o \in X/G} w(o) = \frac{1}{|G|} \sum_{g \in G} \sum_{x \in X_g} w(x)$.
+\subsection{Burnside's lemma}
+The number of orbits under group $G$'s action on set $X$:\\
+$|X/G| = \frac{1}{|G|} \sum_{g \in G} |X_g|$,
+where $X_g=\{ x \in X: g(x)=x \}$. (``Average number of fixed points.'') \\
+Let $w(x)$ be weight of $x$'s orbit. Sum of all orbits' weights:
+$\sum_{o \in X/G} w(o) = \frac{1}{|G|} \sum_{g \in G} \sum_{x \in X_g} w(x)$.
 
 % \subsection{Number of $k$-ary necklaces}
 % $\frac{1}{n}\sum_{d|n} \phi(\frac{n}{d}) k^d$. \\
@@ -605,13 +604,13 @@ are preserved.)
 
 
 
-\subsection{Stoer-Wagner's min-cut algorithm}
-Start from a set $A$ containing an arbitrary vertex.
-While $A \ne V$, add to $A$ the most tightly connected vertex
-($z \notin A$ such that $\sum_{x \in A} w(x, z)$ is maximized.)
-Store cut-of-the-phase (the cut between the last added vertex and rest of
-the graph), and merge the two vertices added last.  Repeat until the graph
-is contracted to a single vertex.  Minimum cut is one of the cuts-of-the-phase.
+% \subsection{Stoer-Wagner's min-cut algorithm}
+% Start from a set $A$ containing an arbitrary vertex.
+% While $A \ne V$, add to $A$ the most tightly connected vertex
+% ($z \notin A$ such that $\sum_{x \in A} w(x, z)$ is maximized.)
+% Store cut-of-the-phase (the cut between the last added vertex and rest of
+% the graph), and merge the two vertices added last.  Repeat until the graph
+% is contracted to a single vertex.  Minimum cut is one of the cuts-of-the-phase.
 
 
 
