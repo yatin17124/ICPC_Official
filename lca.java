@@ -1,15 +1,8 @@
-import java.io.*;
-import java.lang.reflect.Array;
-import java.math.BigInteger;
-import java.util.*;
- 
- 
 class lca {
 	HashMap<Integer,Integer>[] adj;
 	int[][] par, min;
 	int[] depth;
 	int n,d;
-	
 	lca(int nn){
 		n=nn;
 		depth=new int[n];
@@ -21,7 +14,6 @@ class lca {
 			adj[i]=new HashMap<Integer,Integer>();
 		}
 	}
-	
 	void addEdge(int u, int v, int w) {
 		adj[u].put(v, w);
 	}
@@ -37,9 +29,7 @@ class lca {
 	}
 	int walk(int i, int steps) {
         for(int k=0;k<=d && i!=-1;k++) {
-            if(((1<<k)&steps)>0) {
-                i=par[k][i];
-            }
+            if(((1<<k)&steps)>0)i=par[k][i];
         }
         return i;
     }
@@ -49,7 +39,6 @@ class lca {
             i=walk(i,depth[i]-depth[j]);
         }
         else if(depth[j]>depth[i]) j=walk(j,depth[j]-depth[i]);
-        
         if(i==j) return i;
         //if(i==-1 || j==-1) return 0;
         for(int k=d;k>=0;k--) {
@@ -58,10 +47,8 @@ class lca {
                 j=par[k][j];
             }
         }
-        
         return par[0][i];
     }
-    
     void complete() {
     	for(int i=1;i<=d;i++) {
     		for(int j=0;j<n;j++) {
@@ -72,19 +59,5 @@ class lca {
     			}
     		}
     	}
-    }
-	
- 
+	}
 }
- 
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
