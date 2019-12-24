@@ -1,23 +1,10 @@
-package graph;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Stack;
-
 // returns true if walk exists else false
 // complexity - O(|E|)
-
-// tested -
-// for directed - https://open.kattis.com/problems/eulerianpath
-// for undirected -
-
 public class eulerWalk {
-
     graph g;
     int eID;  // essentially number of edges added
     int n;
     ArrayList<Integer> walk = new ArrayList<>();
-
     eulerWalk(int n){
         this.n = n;
         g = new graph(n);
@@ -29,7 +16,6 @@ public class eulerWalk {
         ArrayList<Integer> edgeID = new ArrayList<>(); // to deal with parallel edges self loops
         int indeg = 0;
     }
-
     class graph{
         node[] from;
         graph(int n){
@@ -39,13 +25,11 @@ public class eulerWalk {
             }
         }
     }
-
     void addEdge(int u, int v){
         g.from[u].to.add(v);
         g.from[u].edgeID.add(eID++);
         g.from[v].indeg++;
     }
-
     boolean eWalk(){
         int src = 0;
         int count = 0;
@@ -71,11 +55,8 @@ public class eulerWalk {
         if(walk.size() != eID + 1){
             return false;
         }
-
         // cycle then walk.front == walk.back
-
         Collections.reverse(walk);
         return true;
     }
-
 }
