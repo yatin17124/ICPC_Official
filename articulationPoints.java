@@ -1,20 +1,10 @@
-package graph;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-
-// for undirected graph
-
 public class articulationPoints {
-
     ArrayList<Integer>[] g;
     int[] low;
     int[] dfsNum;
     int[] maxLow; // max of low values of all child in dfs tree
     boolean[] visit;
     int currentNum = 0;
-
     articulationPoints(int N){
         g = new ArrayList[N];
         low = new int[N];
@@ -23,9 +13,6 @@ public class articulationPoints {
         visit = new boolean[N];
         for(int i = 0; i < N; i++){g[i] = new ArrayList<>();}
     }
-
-
-
     void dfs(int u, int parent){
         visit[u] = true;
         dfsNum[u] = low[u] = currentNum++;
@@ -42,7 +29,4 @@ public class articulationPoints {
             }
         }
     }
-
-
-
 }
