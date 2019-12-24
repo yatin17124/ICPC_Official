@@ -483,11 +483,6 @@ A positive composite $n$ is a Carmichael number
 ($a^{n-1} \equiv 1 \pmod{n}$ for all $a$: $\gcd(a,n)=1$),
 iff $n$ is square-free, and for all prime divisors $p$ of $n$, $p-1$ divides $n-1$.
 
-\subsection{Number/sum of divisors}
-$\tau(p_1^{a_1} \dots p_k^{a_k}) = \prod_{j=1}^k (a_j+1)$. \quad
-$\sigma(p_1^{a_1} \dots p_k^{a_k}) = \prod_{j=1}^k \frac{p_j^{a_j+1}-1}{p_j-1}$.
-Maximum number of divisors: 4, 12, 32, 64, 128, 240, 448, 768, 1344, 2304, 4032, 6720, 10752, 17280, 26880, 41472, 64512, 103680
-
 \subsection{Euler's phi function}
 $\phi(n)=|\{m \in {\mathbb N}, m \le n, \gcd(m, n) = 1 \}|$. \\
 
@@ -499,8 +494,7 @@ $\sum_{d|n} \phi(d) = \sum_{d|n} \phi(\frac{n}{d}) = n$.
 \subsection{Fermat's theorem}  $a^p \equiv a \pmod{p}$ if $p$ is prime. \\
 For any polynomial $f(x)$ with integer coefficients and prime $p$,
 $f(x)^{p^n} \equiv f(x^{p^n}) \pmod{p}$
-\subsection{Euler's theorem} $a^{\phi(n)} \equiv 1\pmod{n}$, if $\gcd(a,n)=1$. \\
-\subsection{Wilson's theorem} $p$ is prime iff $(p - 1)! \equiv -1 \pmod p$.
+\subsection{Euler's theorem} $a^{\phi(n)} \equiv 1\pmod{n}$, if $\gcd(a,n)=1$. \\ $p$ is prime iff $(p - 1)! \equiv -1 \pmod p$.
 
 \subsection{Mobius function}
 $\mu(1) = 1$. $\mu(n) = 0$, if $n$ is not squarefree.
