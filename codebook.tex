@@ -568,9 +568,9 @@ each time checking whether there's a corresponding value for RHS.
 % All other triples are multiples of these.
 % Equation $x^2 + y^2 = 2z^2$ is equivalent to $(\frac{x+y}{2})^2 + (\frac{x-y}{2})^2 = z^2$.
 
-\subsection{Postage stamps/McNuggets problem}  Let $a$, $b$ be relatively-prime integers.
-There are exactly $\frac{1}{2}(a-1)(b-1)$ numbers \emph{not} of form $ax+by$ ($x,y \ge 0$),
-and the largest is $(a-1)(b-1)-1 = ab - a - b$.
+% \subsection{Postage stamps/McNuggets problem}  Let $a$, $b$ be relatively-prime integers.
+% There are exactly $\frac{1}{2}(a-1)(b-1)$ numbers \emph{not} of form $ax+by$ ($x,y \ge 0$),
+% and the largest is $(a-1)(b-1)-1 = ab - a - b$.
 
 \subsection{Fermat's two-squares theorem}  Odd prime $p$ can be represented
 as a sum of two squares iff $p \equiv 1 {\pmod 4}$.
@@ -617,29 +617,29 @@ of connected components.  Corollary: $V - E + F = 2$ for a 3D polyhedron.
 % \subsection{Schlafli's} A convex polyhedron in $R^n$, which has $N_0$ vertices, $N_1$ edges,
 % $N_i$ $i$-dimensional faces, satisfies: $N_0-N_1+N_2-\dots=1-(-1)^n$.
 
-\subsection{Vertex covers and independent sets}
-Let $M$, $C$, $I$ be a max matching, a min vertex cover, and a max independent set.
-Then $|M| \le |C| = N - |I|$, with equality for bipartite graphs.
-$(|M|$ is number of edges in maximum matching$)$.
-Complement of an MVC is always a MIS, and vice versa.
-Given a bipartite graph with partitions $(A, B)$, build a network:
-connect source to $A$, and $B$ to sink with edges of capacities, equal to
-the corresponding nodes' weights, or $1$ in the unweighted case.
-Set capacities of the original graph's edges to the infinity.
-Let $(S,T)$ be a minimum $s$-$t$ cut.
-Then a maximum(-weighted) independent set is $I = (A \cap S) \cup (B \cap T)$,
-and a minimum(-weighted) vertex cover is $C = (A \cap T) \cup (B \cap S)$.
+% \subsection{Vertex covers and independent sets}
+% Let $M$, $C$, $I$ be a max matching, a min vertex cover, and a max independent set.
+% Then $|M| \le |C| = N - |I|$, with equality for bipartite graphs.
+% $(|M|$ is number of edges in maximum matching$)$.
+% Complement of an MVC is always a MIS, and vice versa.
+% Given a bipartite graph with partitions $(A, B)$, build a network:
+% connect source to $A$, and $B$ to sink with edges of capacities, equal to
+% the corresponding nodes' weights, or $1$ in the unweighted case.
+% Set capacities of the original graph's edges to the infinity.
+% Let $(S,T)$ be a minimum $s$-$t$ cut.
+% Then a maximum(-weighted) independent set is $I = (A \cap S) \cup (B \cap T)$,
+% and a minimum(-weighted) vertex cover is $C = (A \cap T) \cup (B \cap S)$.
 
-\subsection{Matrix-tree theorem}
-Let matrix $T = [t_{ij}]$, where $t_{ij}$ is the number of multiedges
-between $i$ and $j$, for $i \ne j$, and $t_{ii} = -\mbox{deg}_i$.
-Number of spanning trees of a graph is equal to the determinant of
-a matrix obtained by deleting any $k$-th row and $k$-th column from $T$.
-If $G$ is a multigraph and $e$ is an edge of $G$, then the number $\tau(G)$ of
-spanning trees of $G$ satisfies recurrence $\tau(G) = \tau(G-e) + \tau(G/e)$,
-when $G-e$ is the multigraph obtained by deleting $e$, and $G/e$ is
-the contraction of $G$ by $e$ (multiple edges arising from the contraction
-are preserved.)
+% \subsection{Matrix-tree theorem}
+% Let matrix $T = [t_{ij}]$, where $t_{ij}$ is the number of multiedges
+% between $i$ and $j$, for $i \ne j$, and $t_{ii} = -\mbox{deg}_i$.
+% Number of spanning trees of a graph is equal to the determinant of
+% a matrix obtained by deleting any $k$-th row and $k$-th column from $T$.
+% If $G$ is a multigraph and $e$ is an edge of $G$, then the number $\tau(G)$ of
+% spanning trees of $G$ satisfies recurrence $\tau(G) = \tau(G-e) + \tau(G/e)$,
+% when $G-e$ is the multigraph obtained by deleting $e$, and $G/e$ is
+% the contraction of $G$ by $e$ (multiple edges arising from the contraction
+% are preserved.)
 
 % \subsection{Euler tours}
 % Euler tour in an undirected graph exists iff the graph is connected and each
@@ -683,20 +683,20 @@ are preserved.)
 % a few random values of $x_{i,j}$'s over some field.
 % (e.g. $Z_p$ for a sufficiently large prime $p$)
 
-\subsection{Prufer code of a tree}
-Label vertices with integers $1$ to $n$.
-Repeatedly remove the leaf with the smallest label, and output its only
-neighbor's label, until only one edge remains. The sequence has
-length $n-2$.  Two isomorphic trees have the same sequence, and every sequence
-of integers from $1$ and $n$ corresponds to a tree.
-Corollary: the number of labelled trees with $n$ vertices is $n^{n-2}$.  % Cayley's theorem
+% \subsection{Prufer code of a tree}
+% Label vertices with integers $1$ to $n$.
+% Repeatedly remove the leaf with the smallest label, and output its only
+% neighbor's label, until only one edge remains. The sequence has
+% length $n-2$.  Two isomorphic trees have the same sequence, and every sequence
+% of integers from $1$ and $n$ corresponds to a tree.
+% Corollary: the number of labelled trees with $n$ vertices is $n^{n-2}$.  % Cayley's theorem
 
-\subsection{Erdos-Gallai theorem}
-A sequence of integers $\{ d_1, d_2, \dots, d_n \}$,
-with $n-1 \ge d_1 \ge d_2 \ge \dots \ge d_n \ge 0$ is a degree sequence
-of some undirected simple graph iff $\sum d_i$ is even and
-$d_1 + \dots + d_k \le k(k-1) + \sum_{i=k+1}^n \min(k, d_{i})$
-for all $k=1,2,\dots,n-1$.
+% \subsection{Erdos-Gallai theorem}
+% A sequence of integers $\{ d_1, d_2, \dots, d_n \}$,
+% with $n-1 \ge d_1 \ge d_2 \ge \dots \ge d_n \ge 0$ is a degree sequence
+% of some undirected simple graph iff $\sum d_i$ is even and
+% $d_1 + \dots + d_k \le k(k-1) + \sum_{i=k+1}^n \min(k, d_{i})$
+% for all $k=1,2,\dots,n-1$.
 
 % }}}
 W
@@ -742,7 +742,7 @@ A position with $n$ piles of size $1$ is losing iff $n$ is \emph{odd}
 
 
 % Math {{{
-\section{Math}
+% \section{Math}
 
 % \subsection{Stirling's approximation}
 % $z! = \Gamma(z+1) = \sqrt{2 \pi}\ z^{z+1/2}\ e^{-z}
