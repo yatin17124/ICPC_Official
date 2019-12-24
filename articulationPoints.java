@@ -23,9 +23,12 @@ public class articulationPoints {
             }
             else{
                 dfs(v, u);
-                low[u] = Math.min(low[u], low[v]);   // if(low[v] > dfsNum[u]) then u -- v is a bridge
-                maxLow[u] = Math.max(maxLow[u], low[v]);    // if (maxLow[u] >= dfsNum[u]) then u is an articulation point [Note - this is for except the root of dfs tree]
-                                                            // for root child > 1
+                low[u] = Math.min(low[u], low[v]);
+                // if(low[v] > dfsNum[u]) then u -- v is a bridge
+                maxLow[u] = Math.max(maxLow[u], low[v]);
+                // if (maxLow[u] >= dfsNum[u]) then u is an articulation point
+                //[Note - this is for except the root of dfs tree]
+                // for root child > 1
             }
         }
     }
